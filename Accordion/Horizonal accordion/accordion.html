@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>horizontal accordion</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+
+.main-accordion
+{
+  display: block;
+  width: 43em;
+  margin: 0 auto;
+  background-color: #666;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+
+.main-accordion .haccordion
+{
+  position: relative;
+  display: block;
+  float: left;
+  width: 2em;
+  height: 12em;
+  margin: 0.5em 0 0.5em 0.5em;
+  color: #333;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.main-accordion .haccordion h2
+{
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  width: 12em;
+  height: 2em;
+  top: 12em;
+  left: 0;
+  text-indent: 1em;
+  padding: 0;
+  margin: 0;
+  color: #ddd;
+  cursor: pointer;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.main-accordion .haccordion h2 a
+{
+  display: block;
+  width: 100%;
+  line-height: 2em;
+  text-decoration: none;
+  color: inherit;
+  outline: 0 none;
+}
+
+.main-accordion .haccordion,
+.main-accordion .haccordion h2
+{
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+
+.main-accordion .haccordion.selected
+{
+  width: 30em;
+  padding: 0 1em;
+  color: #333;
+  background-color: #fff;
+}
+
+.main-accordion .haccordion.selected h2
+{
+  position: static;
+  font-size: 1.3em;
+  text-indent: 0;
+  color: #333;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.haccordion .haccordion-content {
+   display: none;
+}
+</style>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    /*====================================
+        Horizontal Accordion 
+    ======================================*/
+    $(document).ready(function(){
+
+               $('.haccordion').eq(0).addClass('selected');
+               $('.haccordion .haccordion-title').eq(0).addClass('selected');
+               $('.haccordion .haccordion-content').eq(0).show(500);
+
+               $(document).on('click', '.haccordion .haccordion-title', function(e){
+                    var $this = $(this),
+                        $content = $this.next();
+                        
+                        $('.haccordion').find('.haccordion-title').removeClass('selected');
+                        $('.haccordion').removeClass('selected');
+                        $('.haccordion').find('.haccordion-content').stop().hide(500);
+
+                        $content.stop().show(500);
+                        $this.addClass('selected');
+                        $this.parent().addClass('selected');
+              });
+    });
+
+</script>
+
+</head>
+<body>
+
+<div class="main-accordion">
+
+  <div class="haccordion">
+    <h2 class="haccordion-title">Title One</h2>
+    <div class="haccordion-content">
+      <p>This content appears on page 1.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elit nec mi ornare et viverra massa pharetra. Phasellus mollis, massa sed suscipit pharetra.</p>
+    </div>
+  </div>
+
+  <div class="haccordion">
+    <h2 class="haccordion-title">Title Two</h2>
+    <div class="haccordion-content">
+      <p>This content appears on page 1.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elit nec mi ornare et viverra massa pharetra. Phasellus mollis, massa sed suscipit pharetra.</p>
+    </div>
+  </div>
+
+  <div class="haccordion">
+    <h2 class="haccordion-title">Title Three</h2>
+    <div class="haccordion-content">
+      <p>This content appears on page 1.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elit nec mi ornare et viverra massa pharetra. Phasellus mollis, massa sed suscipit pharetra.</p>
+    </div>
+  </div>
+
+  <div class="haccordion">
+    <h2 class="haccordion-title">Title Four</h2>
+    <div class="haccordion-content">
+      <p>This content appears on page 1.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elit nec mi ornare et viverra massa pharetra. Phasellus mollis, massa sed suscipit pharetra.</p>
+    </div>
+  </div>
+
+  <div class="haccordion">
+    <h2 class="haccordion-title">Title Five</h2>
+    <div class="haccordion-content">
+      <p>This content appears on page 1.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia elit nec mi ornare et viverra massa pharetra. Phasellus mollis, massa sed suscipit pharetra.</p>
+    </div>
+  </div>
+
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+/*!
+ * 
+ *  styles.css
+ * 
+ */
+
+/* =============================================================================
+  CONTENT
+============================================================================= */
+#page-content{
+	padding:60px 0px;
+}
+
+
+
+/* =============================================================================
+MEDIA QUERIES
+============================================================================= */
+
+/* Displays/Screens (e.g. MacBook @ 1280x800) -------------- */
+@media only screen 
+and (min-width : 1224px) { 
+
+
+}
+
+
+/* Displays/Screens (e.g. 19" WS @ 1440x900) --------------- */
+@media only screen 
+and (min-width : 1450px) {
+
+
+}
+
+
+/* Displays/Screens (e.g. 22" WS @ 1680x1050) -------------- */
+@media
+only screen and (min-width: 1650px) and (max-width: 1889px) {
+    /*STYLES */
+}
+
+
+/* Displays/Screens (e.g. 24" WS @ 1920x1080) -------------- */
+@media only screen 
+and (min-width : 1824px) {
+  
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+
+}
+
+
+@media(max-width:768px){
+
+
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+
+}
+
+
+/*  (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px){
+
+
+}
+
+
+@media (max-width: 767px) { /*Landscape of most mobiles*/
+
+}
+
+@media(max-width:480px){ /*Landscape of iphone 5*/
+
+	
+}
+
+
+@media(max-width:320px){/*portrait of iphone 5 etc*/
+
+}

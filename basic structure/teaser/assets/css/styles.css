@@ -1,0 +1,92 @@
+/*!
+ * 
+ * Navy Coming Soon Page style.css
+ * 
+ */
+
+
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+
+@font-face {
+      font-family:'MuseoSansRounded-100';
+      src: url('../fonts/MuseoSansRounded-100.eot'); /* IE9 Compat Modes */
+      src: url('../fonts/MuseoSansRounded-100?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/MuseoSansRounded-100.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/MuseoSansRounded-100.woff') format('woff'), /* Pretty Modern Browsers */
+      url('../fonts/MuseoSansRounded-100.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/MuseoSansRounded-100.svg#MuseoSansRounded-100') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+      font-family:'MuseoSansRounded-300';
+      src: url('../fonts/MuseoSansRounded-300.eot'); /* IE9 Compat Modes */
+      src: url('../fonts/MuseoSansRounded-300?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/MuseoSansRounded-300.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/MuseoSansRounded-300.woff') format('woff'), /* Pretty Modern Browsers */
+      url('../fonts/MuseoSansRounded-300.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/MuseoSansRounded-300.svg#MuseoSansRounded-300') format('svg'); /* Legacy iOS */
+}
+ 
+body {
+  overflow-x: hidden;
+  font-family: "MuseoSansRounded-300", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:20px;
+}
+.text-muted {
+  color: #777777;
+}
+.text-primary {
+  color: #fed136;
+}
+.alignleft{float:left}
+.alignright{float:right}
+.aligncenter{display:block;margin-left:auto;margin-right:auto}
+
+p {
+  font-size: 20px;
+  line-height: 1.75;
+}
+p.large {
+  font-size: 16px;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+a {
+  color: #fed136;
+}
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #fec503;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MuseoSansRounded-1000", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color:#d94eab;
+}
+
+h1{font-size:100px;}

@@ -1,0 +1,681 @@
+/*!
+ * 
+ * generic.css styles
+ * 
+ *  
+ */
+
+
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ */
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+
+/* =============================================================================
+  GENERIC STYLES
+============================================================================= */
+@font-face {
+  font-family:'Glyphicons Halflings';
+  src:url('../fonts/glyphicons-halflings-regular.eot');
+  src:url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg')
+}
+
+@font-face{
+  font-family:'FontAwesome';
+  src:url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'),
+  url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'),
+  url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ul {
+  list-style: none;
+  line-height: 1.75;
+}
+
+ol{
+  margin-left: 20px;
+  line-height: 1.75;
+}
+
+sup{
+  font-size: 0.75em;
+}
+
+.lists li::before {
+    content: '';
+    background-color: #999;
+    display: inline-block;
+    position: relative;
+    height: 8px;
+    width: 8px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    left: 0px;
+    top: -2px;
+    margin-right: 10px;
+}
+
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #fed136;
+}
+::selection {
+  text-shadow: none;
+  background: #fed136;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #cdbb5e;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+    -webkit-appearance: none;
+}
+
+/*==========================================================================
+       Browser Upgrade Prompt
+==========================================================================*/
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html, body{
+    height: 100%;
+}
+
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+     /*overflow-y: scroll;*/
+     overflow-style: none;
+    -ms-overflow-style: none;  /*ie scrollbar hidden*/
+}
+
+/*chrome, safari scrollbar hidden*/
+/*html::-webkit-scrollbar {
+    display: none;
+}*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:18px;
+  color: #333333;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: #fed136;
+}
+
+
+body.overflow-hidden{/*fullscreen overlay menu*/
+  overflow: hidden;
+}
+
+.alignleft{float:left}
+.alignright{float:right}
+.aligncenter{display:block;margin-left:auto;margin-right:auto}
+
+p {
+  font-family:'Avenir-Book';
+  font-size: 1em;
+  line-height: 1.75;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+  outline: none;
+}
+a {
+  color: #21201e; outline:none;
+}
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #cdbb5e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MinionPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#21201e;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 3.1em;
+}
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+h4 {
+    font-size: 1em;
+}
+h5 {
+    font-size: 0.888em;
+}
+h6 {
+    font-size: 0.666em;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.img-responsive-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.heading{
+  font-family: "MinionPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#21201e;
+  font-weight: normal;
+}
+
+strong{font-family:'Avenir-Black';}
+
+.btn{
+	outline:none;
+}
+
+/*IOS HACK*/
+/*input { 
+    -webkit-appearance: none;
+    -webkit-border-radius:0px;
+}*/
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+table th{
+  font-family: "MinionPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+}
+
+table td{
+  font-size: 1em;
+  font-family:'Avenir-Book';
+}
+
+.textbox{
+border:2px solid #cdbb5e;
+padding:10px 20px;
+}
+
+
+.flex-center-vertically{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 650px;
+  width: 100%;
+}
+
+
+.line {
+    width: 80px;
+    height: 2px;
+    background: #cdbb5e;
+    margin: 10px auto;
+}
+
+.mtop{
+  margin-top: 20px;
+}
+
+.owl-carousel{
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+/* =============================================================================
+  MODAL POPUP
+============================================================================= */
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+
+/* =============================================================================
+  PRELOADER
+============================================================================= */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 10001;
+}
+
+#loading-animation {
+    width: 120px;
+    height: 128px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background:url('../images/loading-animation.GIF'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -60px 0 0 -64px;
+}
+
+
+/* =============================================================================
+  form fields control
+============================================================================= */
+.forms-layout{
+  padding-top: 80px;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+.form-group label{
+  margin-bottom: 15px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 0px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #cccccc;
+    background-color: #fff;
+    background-image: none;
+    border: 0px;
+    border-bottom: 2px solid #cdbb5e;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control:focus{
+  border-color:#cdbb5e;
+  -webkit-box-shadow:inset 0 0px 0px rgba(177,158,61,.075),0 0 0px #cdbb5e;
+  box-shadow:inset 0 0px 0px rgba(177,158,61,.075),0 0 0px #cdbb5e;
+}
+
+select{
+   -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+div.pseudo:after { /*select arrow*/
+  content: "\f078";
+  font-family: 'FontAwesome';
+  text-align:center;
+  color: #cdbb5e;
+  float:right;
+  position:relative;
+  bottom: 25px;
+}
+
+.textarea{
+border: 2px solid #cdbb5e;
+padding: 6px 12px;
+}
+
+.textbox {
+    border: 2px solid #cdbb5e;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.forms-layout iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* =============================================================================
+  CONTENT
+============================================================================= */
+#page-content{
+  
+}
+
+.logo{
+  
+}
+
+video {
+    object-fit: contain;
+}
+
+.div-center{
+  display: inline-block;
+  float: none;
+}
+
+/* =============================================================================
+     CONTENT TABLE FORMAT 
+============================================================================= */
+#content-table table {
+    font-family: 'Avenir-Book';
+    border-collapse: collapse;
+    width: 100%!important;
+}
+
+#content-table table td, #content-table table th {
+    text-align: center;
+    margin: 0px;
+}
+
+#content-table table th{
+  font-family: "MinionPro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.2em;
+  line-height: 1;
+}
+
+#content-table table td{
+  font-size: 1em;
+  font-family:'Avenir-Book';
+  border: 2px dotted #d2c16d;
+  border-bottom: 2px solid #d2c16d;
+  border-right: 2px dotted #d2c16d;
+  border-left: 2px dotted #d2c16d;
+  padding: 10px 10px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+
+#content-table table th {
+  background: #21201e; 
+  color:#ffffff;
+  padding: 15px 0px;
+  vertical-align: middle;
+}
+
+#content-table table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+
+/* =============================================================================
+FOOTER 
+============================================================================= */
+footer {
+   
+}
+
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: none;
+}
+
+.embed-responsive{
+   overflow-y: hidden!important;
+}
+
+
+/* =============================================================================
+MEDIA QUERIES
+============================================================================= */
+@media print {
+  header,footer,nav,#search,#masthead-section,#footer-grid,#section-breadcrumbs{display: none;}
+  a[href]:after { content: none !important; }
+}
+
+/* Displays/Screens (e.g. MacBook @ 1280x800) -------------- */
+@media only screen 
+and (min-width : 1224px) { 
+
+}
+
+
+/* Displays/Screens (e.g. 19" WS @ 1440x900) --------------- */
+@media only screen 
+and (min-width : 1450px) {
+
+}
+
+/* Displays/Screens (e.g. 22" WS @ 1680x1050) -------------- */
+@media
+only screen and (min-width: 1650px) and (max-width: 1889px) {
+  
+}
+
+
+/* Displays/Screens (e.g. 24" WS @ 1920x1080) -------------- */
+@media only screen 
+and (min-width : 1824px) {
+   
+}
+
+
+
+/* iPads/tablets (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+@media(max-width:1024px){
+
+}
+
+
+@media(max-width:768px){/*most of mobiles and portrait of tablets*/
+
+}
+
+
+/* iPads/tablets (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+ 
+}
+
+
+/*  (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px){
+
+}
+
+
+@media (max-width: 767px) { /*Landscape of most mobiles*/
+body {
+  position: relative;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: transparent;
+}
+::selection {
+  text-shadow: none;
+  background: transparent;
+}
+
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+
+
+}
+
+
+
+@media(max-width:480px){ /*Landscape of iphone 5 portrait of iphone 6 plus etc 414,412*/
+
+}
+
+
+@media(max-width:320px){/*portrait of iphone 5 etc*/
+
+}
+
+
+/*only android mobile devices*/
+@media only screen and (min-resolution: 192dpi) and  (max-width: 767px),
+       only screen and (min-resolution: 2dppx) and  (max-width: 767px){
+
+    
+}
+
+@media only screen and (min-resolution: 192dpi) and  (max-width: 320px),
+       only screen and (min-resolution: 2dppx) and  (max-width: 320px){
+
+    
+}
